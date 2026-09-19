@@ -717,8 +717,6 @@ footer {
 
 /* Tablet & Large Phones (768px and below) */
 @media (max-width: 768px) {
-    /* Tablet & Large Phones (768px and below) */
-@media (max-width: 768px) {
     /* Keep logo and button on the same line */
     nav {
         flex-wrap: wrap; 
@@ -745,14 +743,6 @@ footer {
     }
 
     /* Keep grids single column to prevent horizontal scrolling */
-    .project-list, 
-    #hero-boxes, 
-    .skills-grid,
-    .offerings-grid {
-        grid-template-columns: 1fr; 
-    }
-
-    /* Force grids to single column to prevent horizontal scrolling */
     .project-list, 
     #hero-boxes, 
     .skills-grid,

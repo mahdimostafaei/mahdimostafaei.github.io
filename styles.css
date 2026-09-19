@@ -701,3 +701,73 @@ footer {
 .social-link:hover svg {
     transform: translateY(-2px);
 }
+
+/* =========================================
+   16. MOBILE RESPONSIVENESS (Media Queries)
+   ========================================= */
+
+/* Tablet & Large Phones (768px and below) */
+@media (max-width: 768px) {
+    /* Stack Header & Navigation */
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* Force grids to single column to prevent horizontal scrolling */
+    .project-list, 
+    #hero-boxes, 
+    .skills-grid,
+    .offerings-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    /* Reduce global padding to save screen space */
+    main {
+        padding: 20px 15px;
+    }
+    .action-box {
+        padding: 30px 20px;
+    }
+    .contact-info, 
+    .contact-form-box {
+        padding: 20px;
+    }
+}
+
+/* Small Phones (480px and below) */
+@media (max-width: 480px) {
+    /* Stack project buttons vertically */
+    .project-links {
+        flex-direction: column;
+    }
+    
+    /* Stack footer links vertically */
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    /* Shrink large headings slightly to fit screen width */
+    #portfolio-header h1, 
+    .about-text h1, 
+    #contact-header h1, 
+    .mini-about-text h2, 
+    #skills h2 {
+        font-size: 2rem;
+    }
+
+    /* Ensure images in the mini-about scale down properly */
+    .profile-pic,
+    .about-profile-pic {
+        width: 180px;
+        height: 180px;
+    }
+}

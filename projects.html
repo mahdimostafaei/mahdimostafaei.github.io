@@ -11,6 +11,13 @@
     <header>
         <nav>
             <div class="logo">Projects 👩🏻‍💻</div>
+            <button class="hamburger-btn" aria-label="Toggle menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About & Skills</a></li>
@@ -245,6 +252,10 @@
         </div>
         <p>&copy; 2026 The Data Nerd.</p>
     </footer>
-
+    <script>
+        document.querySelector('.hamburger-btn').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+    </script>
 </body>
 </html>

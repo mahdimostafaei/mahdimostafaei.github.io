@@ -678,6 +678,15 @@ footer {
     color: var(--bg-main) !important;
 }
 
+/* Hamburger Menu Button - Hidden on Desktop */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
 /* Adjust layout if viewed on a very small phone screen */
 @media (max-width: 500px) {
     .about-header-row {
@@ -708,16 +717,39 @@ footer {
 
 /* Tablet & Large Phones (768px and below) */
 @media (max-width: 768px) {
-    /* Stack Header & Navigation */
+    /* Tablet & Large Phones (768px and below) */
+@media (max-width: 768px) {
+    /* Keep logo and button on the same line */
     nav {
+        flex-wrap: wrap; 
+    }
+    
+    /* Show the hamburger icon */
+    .hamburger-btn {
+        display: block; 
+    }
+
+    /* Hide the navigation links by default and stack them */
+    nav ul {
+        display: none; 
+        width: 100%;
         flex-direction: column;
+        padding-top: 15px;
         gap: 15px;
         text-align: center;
     }
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+
+    /* JavaScript will add this class to reveal the menu when clicked */
+    nav ul.show {
+        display: flex; 
+    }
+
+    /* Keep grids single column to prevent horizontal scrolling */
+    .project-list, 
+    #hero-boxes, 
+    .skills-grid,
+    .offerings-grid {
+        grid-template-columns: 1fr; 
     }
 
     /* Force grids to single column to prevent horizontal scrolling */
